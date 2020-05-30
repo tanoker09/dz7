@@ -1,6 +1,9 @@
 import java.math.BigInteger;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+*Класс для хранения факториалов
+*/
 public class Store {
     private ConcurrentHashMap<Integer, BigInteger> store;
     public Store(){
