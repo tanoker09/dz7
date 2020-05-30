@@ -1,5 +1,9 @@
 import java.math.BigInteger;
 
+/**
+*Интерфейс для расчета факториала числа с сохраением в общую мапу
+*/
+
 public interface Factoriable {
 
     default BigInteger calculateFactorial(int n, Store store){
