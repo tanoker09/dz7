@@ -3,6 +3,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
 
+/**
+*Класс для расчета массива факториалов
+*/
+
 public class FactorialCalcer implements Callable<List<BigInteger>>, Factoriable{
 
     String name;
