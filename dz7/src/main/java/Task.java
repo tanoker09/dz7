@@ -12,7 +12,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 public class Task {
     public static void main(String[] args) throws InterruptedException {
-        ArrayList<Integer> nums = generateNums(10000000);
+        ArrayList<Integer> nums = generateNums(100000);
         int numThreads = 4;
         int bucketsN = nums.size() / numThreads;
         ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(bucketsN);
@@ -30,7 +30,6 @@ public class Task {
             System.out.println("Created : " + calcer.getName());
 
             tasks.add(calcer);
-            //executor.execute(calcer);
         }
         Instant start = Instant.now();
         List<Future<List<BigInteger>>> futures= executor.invokeAll(tasks);
@@ -51,10 +50,10 @@ public class Task {
     }
 
     public static ArrayList<Integer> generateNums(int n){
-        Random rd = new Random(); // creating Random object
+        Random rd = new Random();
         ArrayList<Integer> arr = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            arr.add(rd.nextInt(10)); // storing random integers in an array
+            arr.add(rd.nextInt(100));
         }
         System.out.println(arr.toString());
         return  arr;
